@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+ <title>Movie Player</title>
+ <style>
+  body {
+   margin:0; background:#000; color:#fff;
+   display:flex; flex-direction:column;
+   height:100vh; width:100vw;
+  }
+  header {
+   display:flex; justify-content:space-between; align-items:center;
+   padding:15px; background:rgba(0,0,0,0.8);
+   position:absolute; top:0; left:0; right:0;
+   z-index:10;
+  }
+  header h1 { margin:0; font-size:20px; }
+  .close-btn {
+   background:#e50914; border:none; padding:6px 12px;
+   border-radius:4px; cursor:pointer; color:white;
+   font-size:16px;
+  }
+  video {
+   flex:1;
+   width:100%; height:100%;
+   background:#000;
+  }
+ </style>
+</head>
+<body>
+ <header>
+  <h1 id="movie-title">Playing Movie</h1>
+  <button class="close-btn" onclick="closePlayer()">X</button>
+ </header>
+
+ <video id="movie-video" controls autoplay>
+  <source id="movie-source" src="" type="video/mp4">
+  Your browser does not support video playback.
+ </video>
+
+ <script>
+  // Get movie title and file from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const title = urlParams.get("movie");
+  const file = urlParams.get("file"); // file path to video
+
+  document.getElementById("movie-title").innerText = title || "Playing Movie";
+  document.getElementById("movie-source").src = file || "sample.mp4";
+  document.getElementById("movie-video").load();
+
+  function closePlayer() {
+   window.location.href = "movies.html";
+  }
+
+  // Protect route
+  if(localStorage.getItem("loggedIn") !== "true") {
+   window.location.href = "index.html";
+  }
+ </script>
+</body>
+</html>

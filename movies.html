@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Netflix Movies</title>
+ <style>
+  body { margin:0; font-family: Arial, sans-serif; background:#000; color:#fff; }
+  header {
+   display:flex; justify-content:space-between; align-items:center;
+   padding:20px; background:#141414;
+  }
+  header img { width:120px; }
+  .logout-btn {
+   background:#e50914; border:none; padding:8px 16px; border-radius:4px;
+   color:white; font-size:16px; cursor:pointer;
+  }
+
+  h2 { margin:20px; }
+
+  .movie-row {
+   display:flex;
+   overflow-x:auto;
+   padding: 0 20px 20px 20px;
+   gap:15px;
+  }
+  .movie {
+   min-width:180px;
+   background:#222;
+   border-radius:6px;
+   overflow:hidden;
+   cursor:pointer;
+   transition: transform 0.2s;
+  }
+  .movie:hover { transform: scale(1.1); }
+  .movie img {
+   width:100%; height:250px; object-fit:cover;
+  }
+  .movie p {
+   margin:0; padding:10px; text-align:center;
+  }
+
+  /* Scrollbar hidden */
+  .movie-row::-webkit-scrollbar { display:none; }
+ </style>
+</head>
+<body>
+
+ <header>
+  <img src="Logos-Readability-Netflix-logo.png" alt="Netflix Logo">
+  <button class="logout-btn" onclick="logout()">Logout</button>
+ </header>
+
+ <h2>Horror</h2>
+ <div class="movie-row">
+ <div class="movie" onclick="watchMovie('The Nun', 'The Nun - Teaser Trailer IMDb.mp4')">
+ <img src="the nun.jpg" alt="The Nun">
+ <p>The Nun</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Conjuring', 'The Conjuring - Trailer 3 IMDb.mp4')">
+ <img src="the conjuring.jpg" alt="conjuring">
+ <p>Conjuring</p>
+</div>
+<div class="movie" onclick="watchMovie('It', 'It - Trailer 2 IMDb.mp4')">
+ <img src="It.jpg" alt="It">
+ <p>It</p>
+</div>
+<div class="movie" onclick="watchMovie('Stree', 'Stree IMDb.mp4')">
+ <img src="Stree.jpg" alt="Stree">
+ <p>Stree</p>
+</div>
+
+<div class="movie" onclick="watchMovie('Evil Dead Rise', 'Evil Dead Rise - Final Review Trailer IMDb.mp4')">
+ <img src="evil dead rise.jpg" alt="Evil Dead Rise">
+ <p>Evil Dead Rise</p>
+</div>
+
+<div class="movie" onclick="watchMovie('The Ritual', 'The Ritual - Official Trailer IMDb.mp4')">
+ <img src="the ritual.jpg" alt="The Ritual">
+ <p>The Ritual</p>
+</div>
+
+<div class="movie" onclick="watchMovie('World War Z', 'World War Z - Version 2 IMDb.mp4')">
+ <img src="world war z.webp" alt="World War Z">
+ <p>World War Z</p>
+</div>
+
+
+
+
+ </div>
+
+ <h2>Action</h2>
+ <div class="movie-row">
+  <div class="movie john" onclick="watchMovie('John Wick', 'John Wick - Official Trailer - 10th Anniversary IMDb.mp4')">
+ <img src="john wick.jpg" alt="John Wick">
+ <p>John Wick</p>
+</div>
+
+  <div class="movie" onclick="watchMovie('Extraction', 'Extraction - Official Trailer IMDb.mp4')">
+ <img src="extraction.jpg" alt="Extraction">
+ <p>Extraction</p>
+</div>
+
+<div class="movie" onclick="watchMovie('Baahubali The Beginning', 'Baahubali The Beginning - Official Trailer IMDb.mp4')">
+ <img src="bahubali.jpg" alt="Baahubali The Beginning ">
+ <p>Baahubali The Beginning </p>
+</div>
+
+<div class="movie" onclick="watchMovie('Nobody', 'Nobody - Super Bowl 2021 Spot IMDb.mp4')">
+ <img src="nobody.jpg" alt="Nobody">
+ <p>Nobody</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Kung Fu Hustle', 'Kung Fu Hustle IMDb.mp4')">
+ <img src="kung fu hustle.jpg" alt="Kung Fu Hustle">
+ <p>Kung Fu Husle</p>
+</div>
+
+
+ <div class="movie" onclick="watchMovie('Lucy', 'Lucy - Trailer 1 IMDb.mp4')">
+ <img src="lucy.jpg" alt="Lucy">
+ <p>Lucy</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('War', 'War - War (2019) Trailer IMDb.mp4')">
+ <img src="war.jpg" alt="War">
+ <p>War</p>
+</div>
+
+ </div>
+
+ <h2>Mystery</h2>
+ <div class="movie-row">
+  <div class="movie" onclick="watchMovie('Shutter Island', 'Shutter Island - Shutter Island Super Bowl Spot IMDb.mp4')">
+ <img src="shutter island.jpg" alt="Shutter Island">
+ <p>Shutter Island</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Gone girl', 'Gone Girl - TV Spot IMDb.mp4')">
+ <img src="gone girl.jpg" alt="Gone Girl">
+ <p>Gone Girl</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('The Guilty', 'The Guilty - Official Trailer IMDb.mp4')">
+ <img src="the guilty.webp" alt="The Guilty">
+ <p>The Guilty</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Sprited Away', 'Spirited Away IMDb.mp4')">
+ <img src="sprited away.jpg" alt="Sprited Away">
+ <p>Sprited Away</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Parasite', 'Parasite - Trailer 2 IMDb.mp4')">
+ <img src="parasite.jpg" alt="Parasite">
+ <p>Parasite</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Deep Water', 'Deep Water - Official Trailer IMDb.mp4')">
+ <img src="deep water.jpg" alt="Deep Water">
+ <p>Deep Water</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Murder Mystery', 'Murder Mystery - Murder Mystery Official Trailer IMDb.mp4')">
+ <img src="murder mystery.jpg" alt="Murder Mystery">
+ <p>Murder Mystery</p>
+</div>
+
+
+ </div>
+
+ <h2>Comedy</h2>
+ <div class="movie-row">
+ <div class="movie" onclick="watchMovie('The Mask' ,'The Mask IMDb.mp4')">
+ <img src="the mask.jpg" alt="The Mask">
+ <p>The Mask</p>
+</div>
+
+  <div class="movie" onclick="watchMovie('Home Alone', 'Home Alone IMDb.mp4')">
+ <img src="home alone.jpg" alt="Home Alone">
+ <p>Home Alone</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Pk' ,'PK - Official Trailer IMDb.mp4')">
+ <img src="pk.jpg" alt="Pk">
+ <p>Pk</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Red Notice' ,'Red Notice - Official Trailer IMDb.mp4')">
+ <img src="red notice.jpg" alt="Red Notice">
+ <p>Red Notice</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Housefull 5' ,'Housefull 5 - Trailer [OV] IMDb.mp4')">
+ <img src="housefulll 5.jpg" alt="Housefull 5">
+ <p>Housefull 5</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('The Fall Guy' ,'The Fall Guy - Official Trailer 2 IMDb.mp4')">
+ <img src="the fall guy.jpg" alt="The Fall Guy">
+ <p>The Fall Guy</p>
+</div>
+
+ <div class="movie" onclick="watchMovie('Don t Look Up' ,'Dont Look Up - Official Trailer IMDb.mp4')">
+ <img src="Don't_Look_Up_2021_film.jpg" alt="Don't Look Up">
+ <p>Don't Look Up</p>
+</div>
+
+
+ </div>
+
+ <script>
+ // Protect route
+  if(localStorage.getItem("loggedIn") !== "true") {
+   window.location.href = "index.html";
+  }
+ function watchMovie(title, file) {
+  window.location.href = "player.html?movie=" + encodeURIComponent(title) + "&file=" + encodeURIComponent(file);
+ }
+
+ 
+
+  function logout() {
+   localStorage.removeItem("loggedIn");
+   window.location.href = "index.html";
+  }
+
+ </script>
+
+</body>
+</html>
+
