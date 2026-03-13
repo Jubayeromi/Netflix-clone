@@ -136,6 +136,7 @@ margin: auto;
 color: white;
 justify-content: center;
 align-items: center;
+
 }
 
 
@@ -226,15 +227,19 @@ color: white;
 }
 
 
+@media (max-width:1050px){
+.first {
+flex-wrap: wrap;
+}
+}
+
 
 @media screen and (max-width: 1300px) {}
 nav{
 max-width: 90vw;
 }
 
-.first {
-flex-wrap: wrap;
-}
+
 
 .secImg img {
 width: 305px;
